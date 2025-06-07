@@ -1,5 +1,5 @@
-# Use a lightweight Python image
-FROM python:3.11-slim
+# Use official ARM-compatible Python base image
+FROM --platform=linux/arm64/v8 python:3.11-slim
 
 # Set working directory
 WORKDIR /app
