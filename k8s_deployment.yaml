@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: planet-hunter
-  labels:
-    app: planet-hunter
 spec:
   replicas: 1
   selector:
@@ -16,10 +14,8 @@ spec:
     spec:
       containers:
       - name: planet-hunter
-        image: your-dockerhub-username/planet-hunter:latest
+        image: yourdockerhubusername/planet-hunter:latest
         imagePullPolicy: Always
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "250m"
-        restartPolicy: Always
+        env:
+        - name: REQUIRE_ALL_CRITERIA
+          value: "false"
