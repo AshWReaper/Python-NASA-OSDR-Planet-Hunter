@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
             - name: planet-hunter
-              image: ashwreaper/planet-hunter:latest
+              image: yourdockerusername/planet-hunter:latest
               volumeMounts:
                 - name: log-volume
                   mountPath: /logs
