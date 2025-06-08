@@ -43,7 +43,7 @@ docker push youruser/planet-hunter:latest
 
 ### 🐳 Run Container Locally (optional)
 ```bash
-sudo docker run --rm ashwreaper/planet-hunter:latest
+sudo docker run --rm youruser/planet-hunter:latest
 ```
 
 ## ☁️ Kubernetes Deployment
