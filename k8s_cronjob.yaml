@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: planet-hunter
+spec:
+  schedule: "0 0 * * *"  # Runs at midnight UTC daily
+  jobTemplate:
+    spec:
+      backoffLimit: 2
+      template:
+        spec:
+          containers:
+            - name: planet-hunter
+              image: ashwreaper/planet-hunter:latest
+              volumeMounts:
+                - name: log-volume
+                  mountPath: /logs
+          restartPolicy: OnFailure
+          volumes:
+            - name: log-volume
+              hostPath:
+                path: /var/log/planet-hunter
+                type: DirectoryOrCreate
