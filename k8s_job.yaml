@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: planet-hunter
+spec:
+  template:
+    metadata:
+      labels:
+        app: planet-hunter
+    spec:
+      containers:
+      - name: planet-hunter
+        image: yourdockeruser/planet-hunter:latest
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "250m"
+      restartPolicy: Never
+  backoffLimit: 2
