@@ -54,7 +54,8 @@ planet-hunter/
 ├── planet_hunter.py         # Main logic
 ├── planet_filters.py        # Modular filtering logic
 ├── Dockerfile               # Container definition
-├── k8s_deployment.yaml      # K8s manifest
+├── k8s_deployment.yaml      # K8s manifest (not currently in use!)
+├── k8s_job.yaml      # K8s manifest (use this one!)
 └── README.md
 ```
 
