@@ -43,7 +43,7 @@ docker push youruser/planet-hunter:latest
 
 ## ☁️ Kubernetes Deployment
 ```bash
-kubectl apply -f k8s_deployment.yaml
+kubectl apply -f k8s_job.yaml
 ```
 
 ---
