@@ -56,6 +56,7 @@ planet-hunter/
 ├── Dockerfile               # Container definition
 ├── k8s_deployment.yaml      # K8s manifest (not currently in use!)
 ├── k8s_job.yaml      # K8s manifest (use this one!)
+├── k8s_cronjob.yaml      # K8s manifest (or this one!)
 └── README.md
 ```
 
